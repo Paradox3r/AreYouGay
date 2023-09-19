@@ -19,25 +19,27 @@ def motionMouse (event):
         messagebox.showerror("","T'abuses")
     if count == 23:
         messagebox.showinfo("","Bon vazi t'es hétéro sale pd")
-        root.quit()
+        win.quit()
 
 
-root = Tk()
-root.geometry('600x600')
-root.title('Gay or Not ?')
-root.resizable(width=False,height=False)
-root['bg'] = 'white'
+win = Tk()
+win.geometry('600x600')
+win.title('Gay or Not ?')
+win.resizable(width=False,height=False)
+win['bg'] = 'white'
 
-label = Label(root, text='Are you gay?', font='Arial 20 bold', bg='white')
+label = Label(win, text='Are you gay?', font='Arial 20 bold', bg='white')
 label.pack()
-btnYes = Button (root, text='No', font= 'Arial 20 bold')
+btnYes = Button (win, text='No', font= 'Arial 20 bold')
 btnYes.place (x=170, y=100)
 btnYes.bind ('<Enter>', motionMouse)
-btnNo = Button (root, text='Yes', font='Arial 20 bold', command=oui)
+btnNo = Button (win, text='Yes', font='Arial 20 bold', command=oui)
 btnNo.place(x=350, y=100)
 
-root.protocol("WM_DELETE_WINDOW", on_closing)
-root.mainloop()
+win.protocol("WM_DELETE_WINDOW", on_closing)
+win.mainloop()
+
+
 
 """
                                               ╔═════════════╗
